@@ -1,0 +1,8 @@
+@misc{vanveen2023clinical,
+      title={Clinical Text Summarization: Adapting Large Language Models Can Outperform Human Experts}, 
+      author={Dave Van Veen and Cara Van Uden and Louis Blankemeier and Jean-Benoit Delbrouck and Asad Aali and Christian Bluethgen and Anuj Pareek and Malgorzata Polacin and William Collins and Neera Ahuja and Curtis P. Langlotz and Jason Hom and Sergios Gatidis and John Pauly and Akshay S. Chaudhari},
+      year={2023},
+      eprint={2309.07430},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
