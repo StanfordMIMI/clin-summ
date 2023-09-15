@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<!-- <script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script> -->
+<link rel="stylesheet" href="./resources/js/simpleLightbox.min.css">
+<script src="./resources/js/simpleLightbox.min.js"></script>
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+
+	* {box-sizing: border-box;}
+
+	.img-magnifier-container {
+	position: relative;
+	}
+
+	.img-magnifier-glass {
+	position: absolute;
+	border: 3px solid #000;
+	border-radius: 50%;
+	cursor: none;
+	/*Set the size of the magnifier glass:*/
+	width: 300px;
+	height: 300px;
+	}
+</style>
+
+<html>
+<head>
+	<title>Clinical Text Summarization: Adapting Large Language Models Can Outperform Human Experts</title>
+	<meta property="og:image" content="resources/teaser.png"/>
+	<meta property="og:title" content="Clinical Text Summarization: Adapting Large Language Models Can Outperform Human Experts" />
+	<meta property="og:description" content="Adapting LLMs for the task of summarizing clinical text." />
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-SM533FK505');
+	</script>
+	<script>
+		/* https://github.com/dbrekalo/simpleLightbox */
+		function createLigthboxGallery() {
+			new SimpleLightbox({elements: '.ImageGallery a'})
+		}
+	</script>
+</head>
+
+<body onload="createLigthboxGallery();">
+	<br>
+	<center>
+		<span style="font-size:36px">
+			Clinical Text Summarization: Adapting Large <br /> Language Models Can Outperform Human Experts
+		</span>
+		</br></br>
+		
+		<table align=center width=600px>
+			<table align=center width=600px>				
+				<tr style="font-size: 14px">
+					<td align=center width=120px >
+						<center>
+						<span><a href="https://davevanveen.com/">Dave<br />Van Veen<sup></sup></a></span>
+						</center>
+					</td>
+					<td align=center><center>Cara Van Uden</center></td>
+					<td align=center><center>Louis Blankemeier</center></td>
+					<td align=center><center>Jean-Benoit Delbrouck</center></td>
+					<td align=center><center>Juan M.Z. Chaves</center></td>
+					<td align=center><center>Asad Aali</center></td>
+				</tr>
+				<tr style="font-size: 14px">
+					<td align=center><center>Christian Bluethgen</center></td>
+					<td align=center><center>Anuj Pareek</center></td>
+					<td align=center><center>Malgorzata Polacin</center></td>
+					<td align=center><center>William Collins</center></td>
+					<td align=center><center>Neera Ahuja</center></td>
+				</tr>
+				<tr style="font-size: 14px">
+					<td align=center><center>Curtis P. Langlotz</center></td>
+					<td align=center><center>Jason Hom</center></td>
+					<td align=center><center>Sergios Gatidis</center></td>
+					<td align=center><center>John Pauly</center></td>
+					<td align=center width=120px>
+						<center>
+							<span><a href="https://profiles.stanford.edu/akshay-chaudhari">Akshay<br />Chaudhari</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+		<p style="font-size: 14px">
+		<span style="text-align: center;">Stanford University</span>
+		</br></p>
+		</br></br></br>
+		<table align=center width=850px>
+			<tr>
+				<td width=260px>
+					<center>
+						<img class="round" style="width:700px; border: 0px;" src="resources/teaser.png"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+		<br>
+			<table align=center width=250px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://arxiv.org/pdf/2309.07430.pdf'>[Paper]</a></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='resources/bibtex.txt'>[BibTeX]</a></span><br>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://github.com/StanfordMIMI/clin-summ'>[Code]</a></span><br>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</table>
+	</center>
+
+	<center>
+
+		<table align=center width=850px>
+			<tr>
+				<td>
+					
+				</td>
+			</tr>
+		</table>
+	</center>
+
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Abstract</h1></center>
+		<tr>
+			<td style='text-align: justify;'>
+				<p> Sifting through vast textual data and summarizing key information imposes a substantial burden on how clinicians allocate their time. Although large language models (LLMs) have shown immense promise in natural language processing (NLP) tasks, their efficacy across diverse clinical summarization tasks has not yet been rigorously examined.</p>
+				<p>In this work, we employ domain adaptation methods on eight LLMs, spanning six datasets and four distinct summarization tasks: radiology reports, patient questions, progress notes, and doctor-patient dialogue. Our thorough quantitative assessment reveals trade-offs between models and adaptation methods in addition to instances where recent advances in LLMs may not lead to improved results. Further, in a clinical reader study with six physicians, we depict that summaries from the best adapted LLM are preferable to human summaries in terms of completeness and correctness. Our ensuing qualitative analysis delineates mutual challenges faced by both LLMs and human experts. Lastly, we correlate traditional quantitative NLP metrics with reader study scores to enhance our understanding of how these metrics align with physician preferences.</p>
+				<p>Our research marks the first evidence of LLMs outperforming human experts in clinical text summarization across multiple tasks. This implies that integrating LLMs into clinical workflows could alleviate documentation burden, empowering clinicians to focus more on personalized patient care and other irreplaceable human aspects of medicine. </p>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<hr>
+
+	<br>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=400px >
+				<center >
+					<td class="img-magnifier-container"><img id="myimage" style="width:800px" src="resources/graphs_medcon.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+	<table align=center width=800px>
+		<tr>
+			<td align=center width=800px>
+				<center>
+					Quantitative metric (MEDCON) scores vs. number of in-context examples across models and datasets. We also include the best model fine-tuned with QLoRA (FLAN-T5) as a horizontal dashed line for valid datasets. Note the allowable number of in-context examples varies signficantly my model context length and dataset size. See the paper for more details and results across other metrics (BLEU, ROUGE-L, BERTScore).
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<hr>
+
+	<table align=center width=550px>
+		<center><h1>Paper</h1></center>
+		<tr>
+			<td><a href="https://arxiv.org/abs/2211.12737"><img class="layered-paper-big" style="height:175px" src="resources/thumbnail.png"/></a></td>
+			<!--
+			<td><span style="font-size:14pt">P. Chambon, C. Bluethgen,<br />JB Delbrouck, R. Van der Sluijs,<br />M. Polacin, J.M.Z. Chaves,<br />T. Abraham, and S. Purohit<br />CP. Langlotz, A. Chaudhari<br>
+			-->
+				<b>Clinical Text Summarization: Adapting Large Language Models Can Outperform Human Experts</b><br>
+				2023. (hosted on <a href="https://arxiv.org/pdf/2309.07430.pdf">ArXiv</a>)<br>
+				<span style="font-size:4pt"><a href=""><br></a>
+				</span>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<table align=center width=600px>
+		<tr>
+			<td><span style="font-size:14pt"><center><a href="resources/bibtex.txt">[Bibtex]</a></center></td>
+		</tr>
+	</table>
+
+	<hr>
+	<br>
+
+	<table align=center width=900px>
+		<tr>
+			<td width=400px>
+				<left>
+					<center><h1>Acknowledgements</h1></center>
+					<p style="text-align: justify;">
+				We’re grateful to both Narasimhan Balasubramanian and the Accelerate Foundation Models Academic Research (AFMAR) program at Microsoft, who both provided Azure OpenAI credits. Further compute support was provided by One Medical, which Asad Aali used as part of his summer internship. Curtis Langlotz is supported by NIH grants R01 HL155410, R01 HL157235, by AHRQ grant R18HS026886, by the Gordon and Betty Moore Foundation, and by the National Institute of Biomedical Imaging and Bioengineering (NIBIB) under contract 75N92020C00021. Akshay Chaudhari receives support from NIH grants R01 HL167974, R01 AR077604, R01 EB002524, R01 AR079431, and P41 EB027060; from NIH contracts 75N92020C00008 and 75N92020C00021; and from GE Healthcare, Philips, and Amazon.
+					</p>
+				</left>
+			</td>
+		</tr>
+	</table>
+
+<br>
+<hr>
+
+<hr>
+<center><span style="font-size: 10px; text-align: center;">This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.<br></span></center>
+<br />
+</body>
+</html>
+
