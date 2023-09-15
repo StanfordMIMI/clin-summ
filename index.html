@@ -257,7 +257,33 @@
 	</table>
 	<br>
 
-	<hr>
+
+    <hr>
+
+	<br>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=400px >
+				<center >
+					<td class="img-magnifier-container"><img id="myimage" style="width:800px" src="resources/win_matrix.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+	<table align=center width=800px>
+		<tr>
+			<td align=center width=800px>
+				<center>
+                    Model win rate: a head-to-head winning percentage of each model combination, where red/blue intensities highlight the degree to which models on the vertical axis outperform models on the horizontal axis. GPT-4 generally achieves the best performance. While FLAN-T5 is more competitive for syntactic metrics such as BLEU, we note this model is constrained to shorter context lengths (see Table 1). When aggregated across datasets, seq2seq models (FLAN-T5, FLAN-UL2) outperform open-source autoregressive models (Llama-2, Vicuna) on all metrics.
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+
+    <hr>
 
 	<br>
 	<table align=center width=400px>
@@ -281,7 +307,113 @@
 	</table>
 	<br>
 
+
+    <hr>
+
+	<br>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=400px >
+				<center >
+					<td class="img-magnifier-container"><img id="myimage" style="width:800px" src="resources/reader_study.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+	<table align=center width=800px>
+		<tr>
+			<td align=center width=800px>
+				<center>
+                    Clinical reader study. Top: Study design comparing the summarization of GPT-4 vs. that of human experts on three attributes: completeness, correctness, and conciseness. Bottom: Results. GPT-4 summaries are rated higher than human summaries on completeness for all three summarization tasks and on correctness overall. Radiology reports highlight a trade-off between correctness (better) and conciseness (worse) with GPT-4. Highlight colors correspond to a value’s location on the color spectrum. Asterisks denote statistical significance by Wilcoxon signed-rank test. 
+
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+
+    <hr>
+
+
+	<br>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=400px >
+				<center >
+					<td class="img-magnifier-container"><img id="myimage" style="width:800px" src="resources/freq_plot.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+	<table align=center width=800px>
+		<tr>
+			<td align=center width=800px>
+				<center>
+                    Distribution of reader scores for each summarization task across evaluated attributes (completeness, correctness, conciseness). Horizontal axes denote reader preference between GPT-4 and human summaries as measured by a five-point Likert scale. Vertical axes denote frequency count, with 900 total reports for each plot. GPT-4 summaries are more often preferred in terms of correctness and completeness. While the largest gain in correctness occurs on radiology reports, this introduces a trade-off with conciseness. See Figure 6 for overall scores.
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+
 	<hr>
+
+
+	<br>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=400px >
+				<center >
+					<td class="img-magnifier-container"><img id="myimage" style="width:800px" src="resources/qual_iii.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+	<table align=center width=800px>
+		<tr>
+			<td align=center width=800px>
+				<center>
+                    Annotation of two radiologist report examples from the reader study. In the top example, GPT-4 performs better due to a laterality mistake by the human expert. In the bottom example, GPT-4 exhibits a lack of conciseness. The table (lower left) contains reader scores for these two examples and the task average across all samples.
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+
+	<hr>
+
+
+	<br>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=400px >
+				<center >
+					<td class="img-magnifier-container"><img id="myimage" style="width:800px" src="resources/corr_plot.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+	<table align=center width=800px>
+		<tr>
+			<td align=center width=800px>
+				<center>
+                    Spearman correlation coefficients between NLP metrics and reader preference assessing completeness, correctness, and conciseness. The semantic metric (BERTScore) and conceptual metric (MEDCON) correlate most highly with correctness. Meanwhile, syntactic metrics BLEU and ROUGE-L correlate most with completeness. Section 5.3 contains further description and discussion.
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+
+	<hr>
+
 
 	<table align=center width=550px>
 		<center><h1>Paper</h1></center>
