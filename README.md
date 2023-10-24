@@ -5,7 +5,7 @@ Official implementation from Stanford University, coming soon!<br>
 - <b>Authors: </b>[Dave Van Veen](https://davevanveen.com/), Cara Van Uden, Louis Blankemeier, Jean-Benoit Delbrouck, Asad Aali, Christian Bluethgen, Anuj Pareek, Malgorzata Polacin, Eduardo Pontes Reis, Anna Seehofnerova Nidhi Rohatgi, Poonam Hosamani, William Collins, Neera Ahuja, Curtis P. Langlotz, Jason Hom, Sergios Gatidis, John Pauly, Akshay S. Chaudhari 
 - <b>Contact: </b>{vanveen} [at] stanford [dot] edu<br>
 
-<img src='img/teaser.png'/>
+<img src='img/overview.png'/>
 
 ## Code and Data
 
