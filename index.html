@@ -211,6 +211,29 @@
 					</td>
 					<td align=center width=120px >
 						<center>
+						<span><a href="https://www.linkedin.com/in/edreismd/">Eduardo P.<br />Reis</a></span>
+						</center>
+					</td>
+					<td align=center width=120px >
+						<center>
+						<span><a href="https://profiles.stanford.edu/anna-seehofnerova">Anna<br />Seehofnerova</a></span>
+						</center>
+					</td>
+				</tr>
+				
+				<tr style="font-size: 14px">
+					<td align=center width=120px >
+						<center>
+						<span><a href="https://profiles.stanford.edu/nidhi-rohatgi">Nidhi<br />Rohatgi</a></span>
+						</center>
+					</td>
+					<td align=center width=120px >
+						<center>
+						<span><a href="https://profiles.stanford.edu/poonam-hosamani">Poonam<br />Hosamani</a></span>
+						</center>
+					</td>
+					<td align=center width=120px >
+						<center>
 						<span><a href="https://profiles.stanford.edu/william-collins">William<br />Collins</a></span>
 						</center>
 					</td>
@@ -219,14 +242,14 @@
 						<span><a href="https://profiles.stanford.edu/neera-ahuja">Neera<br />Ahuja</a></span>
 						</center>
 					</td>
-				</tr>
-
-				<tr style="font-size: 14px">
 					<td align=center width=120px >
 						<center>
 						<span><a href="https://profiles.stanford.edu/curtis-langlotz">Curtis P.<br />Langlotz</a></span>
 						</center>
 					</td>
+				</tr>
+
+				<tr style="font-size: 14px">
 					<td align=center width=120px >
 						<center>
 						<span><a href="https://profiles.stanford.edu/jason-hom">Jason<br />Hom</a></span>
@@ -305,9 +328,33 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td style='text-align: justify;'>
-				<p> Sifting through vast textual data and summarizing key information imposes a substantial burden on how clinicians allocate their time. Although large language models (LLMs) have shown immense promise in natural language processing (NLP) tasks, their efficacy across diverse clinical summarization tasks has not yet been rigorously examined.</p>
-				<p>In this work, we employ domain adaptation methods on eight LLMs, spanning six datasets and four distinct summarization tasks: radiology reports, patient questions, progress notes, and doctor-patient dialogue. Our thorough quantitative assessment reveals trade-offs between models and adaptation methods in addition to instances where recent advances in LLMs may not lead to improved results. Further, in a clinical reader study with six physicians, we depict that summaries from the best adapted LLM are preferable to human summaries in terms of completeness and correctness. Our ensuing qualitative analysis delineates mutual challenges faced by both LLMs and human experts. Lastly, we correlate traditional quantitative NLP metrics with reader study scores to enhance our understanding of how these metrics align with physician preferences.</p>
-				<p>Our research marks the first evidence of LLMs outperforming human experts in clinical text summarization across multiple tasks. This implies that integrating LLMs into clinical workflows could alleviate documentation burden, empowering clinicians to focus more on personalized patient care and other irreplaceable human aspects of medicine. </p>
+				<p>Sifting through vast textual data and summarizing key information from electronic health records (EHR) imposes a substantial burden on how clinicians allocate their time. Although large language models (LLMs) have shown immense promise in natural language processing (NLP) tasks, their efficacy on a diverse range of clinical summarization tasks has not yet been rigorously demonstrated.</p>
+				<p>In this work, we apply domain adaptation methods to eight LLMs, spanning six datasets and four distinct clinical summarization tasks: radiology reports, patient questions, progress notes, and doctor-patient dialogue. Our thorough quantitative assessment reveals trade-offs between models and adaptation methods in addition to instances where recent advances in LLMs may not improve results. Further, in a clinical reader study with ten physicians, we show that summaries from our best-adapted LLMs are preferable to human summaries in terms of completeness and correctness. Our ensuing qualitative analysis highlights challenges faced by both LLMs and human experts. Lastly, we correlate traditional quantitative NLP metrics with reader study scores to enhance our understanding of how these metrics align with physician preferences.</p>
+				<p>Our research marks the first evidence of LLMs outperforming human experts in clinical text summarization across multiple tasks. This implies that integrating LLMs into clinical workflows could alleviate documentation burden, empowering clinicians to focus more on personalized patient care and the inherently human aspects of medicine.</p>
+			</td>
+		</tr>
+	</table>
+	<br>
+    
+	<br>
+    <hr>
+    <br>
+
+	<br>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=400px >
+				<center >
+					<td class="img-magnifier-container"><img id="myimage" style="width:800px" src="resources/prompt_anatomy.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+	<table align=center width=800px>
+		<tr>
+			<td align=left width=800px>
+				Prompt components used for both adaptation methods: in-context learning (ICL, m &gt; 0) and quantized low-rank adaptation (QLoRA, m &equals; 0).
 			</td>
 		</tr>
 	</table>
@@ -382,7 +429,7 @@
 	<table align=center width=800px>
 		<tr>
 			<td align=left width=800px>
-                    Clinical reader study. Top: Study design comparing the summarization of GPT-4 vs. that of human experts on three attributes: completeness, correctness, and conciseness. Bottom: Results. GPT-4 summaries are rated higher than human summaries on completeness for all three summarization tasks and on correctness overall. Radiology reports highlight a trade-off between correctness (better) and conciseness (worse) with GPT-4. Highlight colors correspond to a value’s location on the color spectrum. Asterisks denote statistical significance by Wilcoxon signed-rank test, &ast;p-value &lt; 0.05, &ast;&ast;p-value &lt;&lt; 0.001.
+					Clinical reader study. Top: Study design comparing the summarization of GPT-4 vs. that of human experts on three attributes: completeness, correctness, and conciseness. Bottom: Results. GPT-4 summaries are rated higher than human summaries on all attributes. The most pronounced difference occurs in completeness without compromising conciseness. Meanwhile for correctness, the radiology reports task most benefits from GPT-4. Highlight colors correspond to a value’s location on the color spectrum. Asterisks denote statistical significance by Wilcoxon signed-rank test, &ast;p-value &lt; 0.001.
 			</td>
 		</tr>
 	</table>
@@ -408,7 +455,7 @@
 	<table align=center width=800px>
 		<tr>
 			<td align=left width=800px>
-                    Distribution of reader scores for each summarization task across evaluated attributes (completeness, correctness, conciseness). Horizontal axes denote reader preference between GPT-4 and human summaries as measured by a five-point Likert scale. Vertical axes denote frequency count, with 900 total reports for each plot. GPT-4 summaries are more often preferred in terms of correctness and completeness. While the largest gain in correctness occurs on radiology reports, this introduces a trade-off with conciseness.
+					Distribution of reader scores for each summarization task across evaluated attributes (completeness, correctness, conciseness). Horizontal axes denote reader preference between GPT-4 and human summaries as measured by a five-point Likert scale. Vertical axes denote frequency count, with 1,500 total reports for each plot. GPT-4 summaries are more often preferred across all attributes. The largest gain in correctness occurs on radiology reports, as no false information was found in GPT-4 summaries for this task.
 			</td>
 		</tr>
 	</table>
@@ -460,7 +507,7 @@
 	<table align=center width=800px>
 		<tr>
 			<td align=left width=800px>
-                    Spearman correlation coefficients between NLP metrics and reader preference assessing completeness, correctness, and conciseness. The semantic metric (BERTScore) and conceptual metric (MEDCON) correlate most highly with correctness. Meanwhile, syntactic metrics BLEU and ROUGE-L correlate most with completeness. Section 5.3 contains further description and discussion.
+                    Spearman correlation coefficients between NLP metrics and reader preference assessing completeness, correctness, and conciseness. The semantic metric (BERTScore) and conceptual metric (MEDCON) correlate most highly with correctness. Meanwhile, syntactic metrics BLEU and ROUGE-L correlate most with completeness.
 			</td>
 		</tr>
 	</table>
@@ -475,7 +522,7 @@
 		<center><h1>Paper</h1></center>
 		<tr>
 			<td><a href="https://arxiv.org/abs/2309.07430"><img class="layered-paper-big" style="height:175px" src="resources/thumbnail.png"/></a></td>
-			<td><span style="font-size:14pt">D. Van Veen, C. Van Uden, L. Blankemeier,<br />J.B. Delbrouck, A. Aali, C. Bluethgen,<br />A. Pareek, M. Polacin, W. Collins<br />N. Ahuja, C.P. Langlotz, J. Hom,<br />S. Gatidis, J. Pauly, A.S. Chaudhari<br>
+			<td><span style="font-size:14pt">D. Van Veen, C. Van Uden, L. Blankemeier,<br />J.B. Delbrouck, A. Aali, C. Bluethgen,<br />A. Pareek, M. Polacin, E.P. Reis<br />A. Seehofnerova, N. Rohatgi, P. Hosamani<br />W. Collins, N. Ahuja, C.P. Langlotz, J. Hom,<br />S. Gatidis, J. Pauly, A.S. Chaudhari<br>
 				<b>Clinical Text Summarization: Adapting Large Language Models Can Outperform Human Experts</b><br>
 				2023. (hosted on <a href="https://arxiv.org/pdf/2309.07430.pdf">ArXiv</a>)<br>
 				<span style="font-size:4pt"><a href=""><br></a>
@@ -501,7 +548,7 @@
 				<left>
 					<center><h1>Acknowledgements</h1></center>
 					<p style="text-align: justify;">
-				We’re grateful to both Narasimhan Balasubramanian and the Accelerate Foundation Models Academic Research (AFMAR) program at Microsoft, who both provided Azure OpenAI credits. Further compute support was provided by One Medical, which Asad Aali used as part of his summer internship. Curtis Langlotz is supported by NIH grants R01 HL155410, R01 HL157235, by AHRQ grant R18HS026886, by the Gordon and Betty Moore Foundation, and by the National Institute of Biomedical Imaging and Bioengineering (NIBIB) under contract 75N92020C00021. Akshay Chaudhari receives support from NIH grants R01 HL167974, R01 AR077604, R01 EB002524, R01 AR079431, and P41 EB027060; from NIH contracts 75N92020C00008 and 75N92020C00021; and from GE Healthcare, Philips, and Amazon.
+						Microsoft provided Azure OpenAI credits for this project via both the Accelerate Foundation Models Academic Research (AFMAR) program and also a cloud services grant to Stanford Data Science. Further compute support was provided by One Medical, which Asad Aali used as part of his summer internship. Curtis Langlotz is supported by NIH grants R01 HL155410, R01 HL157235, by AHRQ grant R18HS026886, by the Gordon and Betty Moore Foundation, and by the National Institute of Biomedical Imaging and Bioengineering (NIBIB) under contract 75N92020C00021. Akshay Chaudhari receives support from NIH grants R01 HL167974, R01 AR077604, R01 EB002524, R01 AR079431, and P41 EB027060; from NIH contracts 75N92020C00008 and 75N92020C00021; and from GE Healthcare, Philips, and Amazon.
 					</p>
 				</left>
 			</td>
