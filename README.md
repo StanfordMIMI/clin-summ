@@ -1,15 +1,48 @@
 # Clinical Text Summarization by Adapting LLMs
 
-Official implementation from Stanford University, coming soon!<br>
+Official implementation from Stanford University<br>
 - <b> Title: </b>[Clinical Text Summarization: Adapting Large Language Models Can Outperform Human Experts](https://arxiv.org/pdf/2309.07430.pdf)<br>
 - <b>Authors: </b>[Dave Van Veen](https://davevanveen.com/), Cara Van Uden, Louis Blankemeier, Jean-Benoit Delbrouck, Asad Aali, Christian Bluethgen, Anuj Pareek, Malgorzata Polacin, Eduardo Pontes Reis, Anna Seehofnerova Nidhi Rohatgi, Poonam Hosamani, William Collins, Neera Ahuja, Curtis P. Langlotz, Jason Hom, Sergios Gatidis, John Pauly, Akshay S. Chaudhari 
 - <b>Contact: </b>{vanveen} [at] stanford [dot] edu<br>
 
-<img src='img/overview.png'/>
+<img src='data/overview.png'/>
 
-## Code and Data
 
-We will soon publish our code and pre-processed data. Feel free to star the repo so you don't miss it.
+## Datasets
+We use six pre-existing open-source datasets which are publicly accessible at the sources cited in our manuscript. Additionally, for datasets which do not require Physionet access, we provide our preprocessed versions in `data/`: 
+- `opi`: Open-i (radiology reports)
+- `chq`: MeQSum (patient/consumer health questions)
+- `d2n`: ACI-Bench (dialogue)
+
+## Code
+
+### Set-up
+
+1. Use these commands to set up a conda environment:
+```
+conda env create -f env.yml
+conda activate clin-summ 
+```
+2. In `src/constants.py`, create your own project directory `DIR_PROJECT` outside this repository which will contain input data, trained models, and generated output.
+3. Move input data from this repo to `DIR_PROJECT`, i.e. `mv data/ DIR_PROJECT`
+4. (optional) To add your own dataset, follow the format of example datasets `opi`, `chq`, and `d2n` in `DIR_PROJECT/data/`
+
+
+### Usage
+
+Below is a description of relevant scripts:
+
+- `./main.sh`: Fine-tune open-source models, query, and compute metrics
+- `python api/main.py`: Query OpenAI models and compute metrics
+    - first enter information for your Azure deployment in `src/constants.py` via `RESOURCE` and `API_KEY`
+- `python src/gen_faiss_idx.py`: (new datasets only) Determine set of nearest neighbors training examples for each sample. Alternatively you can sample training examples at random.
+- `src/UMLSScorer.py`: Class definition for the MEDCON metric. To implement, follow these steps:
+    1) Acquire approval for a [UMLS license](https://www.nlm.nih.gov/research/umls/index.html)
+    2) Follow the [UMLS download instructions](https://github.com/Georgetown-IR-Lab/QuickUMLS)
+    3) Adapt the provided script, `src/UMLSScorer.py`
+    4) Call using the following two lines:
+        - `scorer = UMLSScorer()`
+        - `medcon_score = scorer(string1, string2)`
 
 ## Citation
 
