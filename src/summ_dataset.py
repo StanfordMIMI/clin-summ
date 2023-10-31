@@ -13,7 +13,7 @@ import process
 class SummDataset():
     ''' dataset class for summarization tasks '''
 
-    def __init__(self, args, task='test_v2', purpose='default'):
+    def __init__(self, args, task='test', purpose='default'):
         ''' instantiate SummDataset class for one of three purposes
             default:        load+process inputs for training/generating
             load_inputs:    load inputs only, no processing
@@ -43,14 +43,9 @@ class SummDataset():
         # get path to inputs
         if purpose in ['default', 'load_inputs', 'calc_max_new_toks']:
             task = 'trn' if purpose == 'calc_max_new_toks' else self.task 
-            if task not in ['trn', 'val', 'test', 'test_v2']:
+            if task not in ['trn', 'val', 'test']:
                 raise ValueError('must specify task to be either [trn, val, test]')
-            # test.jsonl: original. test_v2.jsonl: processed in 230726.ipynb
-            task_dict = {'trn': 'train', 'val': 'validate',
-                         #'test': 'test', 'test_v2': 'test_v2'}
-                         'test': 'test_v2', 'test_v2': 'test_v2'}
-            if task=='val' and 'v2' in constants.FN_TST:
-                raise NotImplementedError('test_v2 includes validation set')
+            task_dict = {'trn': 'train', 'val': 'validate', 'test': 'test'}
             path_data = os.path.join(args.dir_data, f'{task_dict[task]}.jsonl')
 
         # get path to results
