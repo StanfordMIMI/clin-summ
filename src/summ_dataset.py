@@ -211,7 +211,10 @@ class SummDataset():
         n_toks.sort()
         n_seqs = len(n_toks)
 
-        self.max_new_toks = n_toks[int((1 - args.thresh_out_toks) * n_seqs)]
+        if args.thresh_out_toks == 0: # no thresholding
+            self.max_new_toks = n_toks[-1]
+        else:
+            self.max_new_toks = n_toks[int((1 - args.thresh_out_toks) * n_seqs)]
 
 
     def get_pregenerated_samples(self, args):
