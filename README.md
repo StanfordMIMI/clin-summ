@@ -14,6 +14,15 @@ We use six pre-existing open-source datasets which are publicly accessible at th
 - `chq`: MeQSum (patient/consumer health questions)
 - `d2n`: ACI-Bench (dialogue)
 
+## Models
+In addition to proprietary models GPT-3.5 and GPT-4, we adapt the following open-source models available from HuggingFace:
+- [FLAN-T5](https://huggingface.co/google/flan-t5-xl)
+- [FLAN-UL2](https://huggingface.co/google/flan-ul2)
+- [Alpaca](https://huggingface.co/chavinlo/alpaca-native)
+- [Med-Alpaca](https://huggingface.co/medalpaca/medalpaca-7b)
+- [Vicuna](https://huggingface.co/AlekseyKorshuk/vicuna-7b)
+- [Llama-2](https://huggingface.co/meta-llama/Llama-2-7b-hf)
+
 ## Code
 
 ### Set-up
