@@ -3,4 +3,4 @@ This directory contains data from publicly available datasets which do not requi
 - `chq`: MeQSum (patient/consumer health questions)
 - `d2n`: ACI-Bench (dialogue)
 
-Please refer to the manuscript for the other three manuscripts (PhysioNet access required).
+Please refer to the manuscript for the other three datasets (PhysioNet access required).
