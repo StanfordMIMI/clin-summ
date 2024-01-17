@@ -9,7 +9,7 @@ Official implementation from Stanford University<br>
 
 
 ## Datasets
-We use six pre-existing open-source datasets which are publicly accessible at the sources cited in our manuscript. Additionally, for datasets which do not require Physionet access, we provide our preprocessed versions in `data/`: 
+We use six pre-existing open-source datasets which are publicly accessible at the sources cited in our manuscript. Additionally, for datasets which do not require PhysioNet access, we provide our versions in `data/`: 
 - `opi`: Open-i (radiology reports)
 - `chq`: MeQSum (patient/consumer health questions)
 - `d2n`: ACI-Bench (dialogue)
