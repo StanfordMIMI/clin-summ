@@ -136,9 +136,9 @@
 
 <html>
 <head>
-	<title>Clinical Text Summarization: Adapting Large Language Models Can Outperform Human Experts</title>
+	<title>Adapted Large Language Models Can Outperform Medical Experts in Clinical Text Summarization</title>
 	<meta property="og:image" content="resources/teaser.png"/>
-	<meta property="og:title" content="Clinical Text Summarization: Adapting Large Language Models Can Outperform Human Experts" />
+	<meta property="og:title" content="Adapted Large Language Models Can Outperform Medical Experts in Clinical Text Summarization" />
 	<meta property="og:description" content="Adapting LLMs for the task of summarizing clinical text." />
 	<script>
 	  window.dataLayer = window.dataLayer || [];
@@ -158,7 +158,7 @@
 	<br>
 	<center>
 		<span style="font-size:36px">
-			Clinical Text Summarization: Adapting Large <br /> Language Models Can Outperform Human Experts
+            Adapted Large Language Models Can Outperform <br /> Medical Experts in Clinical Text Summarization 
 		</span>
 		</br></br>
 		
@@ -328,9 +328,10 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td style='text-align: justify;'>
-				<p>Sifting through vast textual data and summarizing key information from electronic health records (EHR) imposes a substantial burden on how clinicians allocate their time. Although large language models (LLMs) have shown immense promise in natural language processing (NLP) tasks, their efficacy on a diverse range of clinical summarization tasks has not yet been rigorously demonstrated.</p>
-				<p>In this work, we apply domain adaptation methods to eight LLMs, spanning six datasets and four distinct clinical summarization tasks: radiology reports, patient questions, progress notes, and doctor-patient dialogue. Our thorough quantitative assessment reveals trade-offs between models and adaptation methods in addition to instances where recent advances in LLMs may not improve results. Further, in a clinical reader study with ten physicians, we show that summaries from our best-adapted LLMs are preferable to human summaries in terms of completeness and correctness. Our ensuing qualitative analysis highlights challenges faced by both LLMs and human experts. Lastly, we correlate traditional quantitative NLP metrics with reader study scores to enhance our understanding of how these metrics align with physician preferences.</p>
-				<p>Our research marks the first evidence of LLMs outperforming human experts in clinical text summarization across multiple tasks. This implies that integrating LLMs into clinical workflows could alleviate documentation burden, empowering clinicians to focus more on personalized patient care and the inherently human aspects of medicine.</p>
+                <p>Analyzing vast textual data and summarizing key information from electronic health records imposes a substantial burden on how clinicians allocate their time. Although large language models (LLMs) have shown promise in natural language processing (NLP), their effectiveness on a diverse range of clinical summarization tasks remains unproven.</p>
+                <p>In this study, we apply adaptation methods to eight LLMs, spanning four distinct clinical summarization tasks: radiology reports, patient questions, progress notes, and doctor-patient dialogue. Quantitative assessments with syntactic, semantic, and conceptual NLP metrics reveal trade-offs between models and adaptation methods. A clinical reader study with ten physicians evaluates summary completeness, correctness, and conciseness; in a majority of cases, summaries from our best adapted LLMs are either equivalent (45%) or superior (36%) compared to summaries from medical experts. The ensuing safety analysis highlights challenges faced by both LLMs and medical experts, as we connect errors to potential medical harm and categorize types of fabricated
+information.</p> 
+            <p>Our research provides evidence of LLMs outperforming medical experts in clinical text summarization across multiple tasks. This suggests that integrating LLMs into clinical workflows could alleviate documentation burden, allowing clinicians to focus more on patient care.</p>
 			</td>
 		</tr>
 	</table>
@@ -354,7 +355,8 @@
 	<table align=center width=800px>
 		<tr>
 			<td align=left width=800px>
-				Prompt components used for both adaptation methods: in-context learning (ICL, m &gt; 0) and quantized low-rank adaptation (QLoRA, m &equals; 0).
+				<b>Left:</b> Prompt anatomy for both adaptation methods: in-context learning (ICL, m &gt; 0) and quantized low-rank adaptation (QLoRA, m &equals; 0).
+                <b>Right:</b> We generally find better performance when (1) using lower temperature, i.e. generating less random output, as summarization tasks benefit more from truthfulness than creativity (2) assigning the model clinical expertise in the prompt.
 			</td>
 		</tr>
 	</table>
@@ -404,7 +406,7 @@
 	<table align=center width=800px>
 		<tr>
 			<td align=left width=800px>
-					Quantitative metric (MEDCON) scores vs. number of in-context examples across models and datasets. We also include the best model fine-tuned with QLoRA (FLAN-T5) as a horizontal dashed line for valid datasets. Zero-shot prompting (0 examples) often yields considerably inferior results, underscoring the need for adaptation methods. Note the allowable number of in-context examples varies signficantly by model context length and dataset size. See the paper for more details and results across other metrics (BLEU, ROUGE-L, BERTScore).
+					Quantitative metric (MEDCON) scores vs. number of in-context examples across models and datasets. We also include the best model fine-tuned with QLoRA (FLAN-T5) as a horizontal dashed line for valid datasets. Zero-shot prompting (0 examples) often yields considerably inferior results, underscoring the need for adaptation methods. Note the allowable number of in-context examples varies signficantly by model context length and dataset size. See the paper for results across other metrics.
 			</td>
 		</tr>
 	</table>
@@ -429,33 +431,13 @@
 	<table align=center width=800px>
 		<tr>
 			<td align=left width=800px>
-					Clinical reader study. Top: Study design comparing the summarization of GPT-4 vs. that of human experts on three attributes: completeness, correctness, and conciseness. Bottom: Results. GPT-4 summaries are rated higher than human summaries on all attributes. The most pronounced difference occurs in completeness without compromising conciseness. Meanwhile for correctness, the radiology reports task most benefits from GPT-4. Highlight colors correspond to a value’s location on the color spectrum. Asterisks denote statistical significance by Wilcoxon signed-rank test, &ast;p-value &lt; 0.001.
-			</td>
-		</tr>
-	</table>
-	<br>
-
-
-    <br>
-    <hr>
-    <br>
-
-
-	<br>
-	<table align=center width=400px>
-		<tr>
-			<td align=center width=400px >
-				<center >
-					<td class="img-magnifier-container"><img id="myimage" style="width:700px" src="resources/freq_plot.png"/></td>
-				</center>
-			</td>
-		</tr>
-	</table>
-
-	<table align=center width=800px>
-		<tr>
-			<td align=left width=800px>
-					Distribution of reader scores for each summarization task across evaluated attributes (completeness, correctness, conciseness). Horizontal axes denote reader preference between GPT-4 and human summaries as measured by a five-point Likert scale. Vertical axes denote frequency count, with 1,500 total reports for each plot. GPT-4 summaries are more often preferred across all attributes. The largest gain in correctness occurs on radiology reports, as no false information was found in GPT-4 summaries for this task.
+					<b>Clinical reader study.</b>
+                    <b>(a)</b> Study design comparing the summaries from the best model versus that of medical
+experts on three attributes: completeness, correctness, and conciseness.
+                    <b>(b)</b> Results. Model summaries are rated higher on all attributes. Highlight colors correspond to a value’s location on the color spectrum. Asterisks (*) denote statistical significance.
+                    <b>(c)</b> Distribution of reader scores. Horizontal axes denote reader preference as measured by a five-point Likert scale. Vertical axes denote frequency count, with 1,500 total reports for each plot.
+                    <b>(d)</b> Extent and likelihood of potential medical harm caused by choosing summaries from the medical expert (pink) or best model (purple) over the other. Model summaries are preferred in both categories.
+                    <b>(e)</b> Reader study user interface.
 			</td>
 		</tr>
 	</table>
@@ -481,7 +463,9 @@
 	<table align=center width=800px>
 		<tr>
 			<td align=left width=800px>
-                    Annotation of two radiologist report examples from the reader study. In the top example, GPT-4 performs better due to a laterality mistake by the human expert. In the bottom example, GPT-4 exhibits a lack of conciseness. The table (lower left) contains reader scores for these two examples and the task average across all samples.
+                    <b>Annotation: radiology reports.</b> The table (lower left) contains reader scores for these two examples and the task average across all samples.
+                    <b>Top:</b>The model performs better due to a laterality mistake by the medical expert.
+                    <b>Bottom:</b>The model exhibits a lack of conciseness. The table (lower left) contains reader scores for these two examples and the task average across all samples.
 			</td>
 		</tr>
 	</table>
@@ -507,7 +491,7 @@
 	<table align=center width=800px>
 		<tr>
 			<td align=left width=800px>
-                    Spearman correlation coefficients between NLP metrics and reader preference assessing completeness, correctness, and conciseness. The semantic metric (BERTScore) and conceptual metric (MEDCON) correlate most highly with correctness. Meanwhile, syntactic metrics BLEU and ROUGE-L correlate most with completeness.
+                    Spearman correlation coefficients between NLP metrics and reader scores. The semantic metric (BERTScore) and conceptual metric (MEDCON) correlate most highly with correctness. Meanwhile, syntactic metrics BLEU and ROUGE-L correlate most with completeness.
 			</td>
 		</tr>
 	</table>
@@ -523,7 +507,7 @@
 		<tr>
 			<td><a href="https://arxiv.org/abs/2309.07430"><img class="layered-paper-big" style="height:175px" src="resources/thumbnail.png"/></a></td>
 			<td><span style="font-size:14pt">D. Van Veen, C. Van Uden, L. Blankemeier,<br />J.B. Delbrouck, A. Aali, C. Bluethgen,<br />A. Pareek, M. Polacin, E.P. Reis<br />A. Seehofnerova, N. Rohatgi, P. Hosamani<br />W. Collins, N. Ahuja, C.P. Langlotz, J. Hom,<br />S. Gatidis, J. Pauly, A.S. Chaudhari<br>
-				<b>Clinical Text Summarization: Adapting Large Language Models Can Outperform Human Experts</b><br>
+				<b>Adapted Large Language Models Can Outperform Medical Experts in Clinical Text Summarization</b><br>
 				2023. (hosted on <a href="https://arxiv.org/pdf/2309.07430.pdf">ArXiv</a>)<br>
 				<span style="font-size:4pt"><a href=""><br></a>
 				</span>
