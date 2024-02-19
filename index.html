@@ -381,7 +381,7 @@ information.</p>
 	<table align=center width=800px>
 		<tr>
 			<td align=left width=800px>
-                    Model win rate: a head-to-head winning percentage of each model combination, where red/blue intensities highlight the degree to which models on the vertical axis outperform models on the horizontal axis. GPT-4 generally achieves the best performance. While FLAN-T5 is more competitive for syntactic metrics such as BLEU, we note this model is constrained to shorter context lengths (see Table 1). When aggregated across datasets, seq2seq models (FLAN-T5, FLAN-UL2) outperform open-source autoregressive models (Llama-2, Vicuna) on all metrics.
+                    <b>Model win rate</b>: a head-to-head winning percentage of each model combination, where red/blue intensities highlight the degree to which models on the vertical axis outperform models on the horizontal axis. GPT-4 generally achieves the best performance. While FLAN-T5 is more competitive for syntactic metrics such as BLEU, we note this model is constrained to shorter context lengths (see Table 1). When aggregated across datasets, seq2seq models (FLAN-T5, FLAN-UL2) outperform open-source autoregressive models (Llama-2, Vicuna) on all metrics.
 			</td>
 		</tr>
 	</table>
@@ -406,7 +406,7 @@ information.</p>
 	<table align=center width=800px>
 		<tr>
 			<td align=left width=800px>
-					Quantitative metric (MEDCON) scores vs. number of in-context examples across models and datasets. We also include the best model fine-tuned with QLoRA (FLAN-T5) as a horizontal dashed line for valid datasets. Zero-shot prompting (0 examples) often yields considerably inferior results, underscoring the need for adaptation methods. Note the allowable number of in-context examples varies signficantly by model context length and dataset size. See the paper for results across other metrics.
+					<b>MEDCON scores vs. number of in-context examples</b> across models and datasets. We also include the best model fine-tuned with QLoRA (FLAN-T5) as a horizontal dashed line for valid datasets. Zero-shot prompting (0 examples) often yields considerably inferior results, underscoring the need for adaptation methods. Note the allowable number of in-context examples varies signficantly by model context length and dataset size. See the paper for results across other metrics.
 			</td>
 		</tr>
 	</table>
@@ -464,8 +464,8 @@ experts on three attributes: completeness, correctness, and conciseness.
 		<tr>
 			<td align=left width=800px>
                     <b>Annotation: radiology reports.</b> The table (lower left) contains reader scores for these two examples and the task average across all samples.
-                    <b>Top:</b>The model performs better due to a laterality mistake by the medical expert.
-                    <b>Bottom:</b>The model exhibits a lack of conciseness. The table (lower left) contains reader scores for these two examples and the task average across all samples.
+                    <b>Top:</b> The model performs better due to a laterality mistake by the medical expert.
+                    <b>Bottom:</b> The model exhibits a lack of conciseness. The table (lower left) contains reader scores for these two examples and the task average across all samples.
 			</td>
 		</tr>
 	</table>
@@ -491,7 +491,7 @@ experts on three attributes: completeness, correctness, and conciseness.
 	<table align=center width=800px>
 		<tr>
 			<td align=left width=800px>
-                    Spearman correlation coefficients between NLP metrics and reader scores. The semantic metric (BERTScore) and conceptual metric (MEDCON) correlate most highly with correctness. Meanwhile, syntactic metrics BLEU and ROUGE-L correlate most with completeness.
+                    <b>Correlation between NLP metrics and reader scores.</b> The semantic metric (BERTScore) and conceptual metric (MEDCON) correlate most highly with correctness. Meanwhile, syntactic metrics BLEU and ROUGE-L correlate most with completeness.
 			</td>
 		</tr>
 	</table>
@@ -543,8 +543,6 @@ experts on three attributes: completeness, correctness, and conciseness.
 <br>
 <hr>
 
-<center><span style="font-size: 10px; text-align: center;">This template was originally created by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.<br></span></center>
-<br />
 </body>
 </html>
 
