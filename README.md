@@ -1,7 +1,7 @@
 # Clinical Text Summarization by Adapting LLMs
 
 Official implementation from Stanford University<br>
-- <b> Title: </b>[Clinical Text Summarization: Adapting Large Language Models Can Outperform Human Experts](https://arxiv.org/pdf/2309.07430.pdf)<br>
+- <b> Title: </b>[Adapted Large Language Models Can Outperform Medical Experts in Clinical Text Summarization](https://arxiv.org/pdf/2309.07430.pdf)<br>
 - <b>Authors: </b>[Dave Van Veen](https://davevanveen.com/), Cara Van Uden, Louis Blankemeier, Jean-Benoit Delbrouck, Asad Aali, Christian Bluethgen, Anuj Pareek, Malgorzata Polacin, Eduardo Pontes Reis, Anna Seehofnerova Nidhi Rohatgi, Poonam Hosamani, William Collins, Neera Ahuja, Curtis P. Langlotz, Jason Hom, Sergios Gatidis, John Pauly, Akshay S. Chaudhari 
 - <b>Contact: </b>{vanveen} [at] stanford [dot] edu<br>
 
