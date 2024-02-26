@@ -6,7 +6,7 @@ import numpy as np
 import os
 from radgraph import F1RadGraph
 import sys
-from UMLSScorer import UMLSScorer 
+# from UMLSScorer import UMLSScorer 
 
 import constants
 import parser
@@ -40,9 +40,9 @@ def main():
     bertscore = evaluate.load('bertscore')
     f1radgraph = F1RadGraph(reward_level='partial')
     f1chexbert = F1CheXbert(device='cuda') if is_cxr else None
-    medcon = UMLSScorer()
+    # medcon = UMLSScorer()
     metrics = (bleu, rouge, bertscore,
-               f1radgraph, f1chexbert, medcon)
+               f1radgraph, f1chexbert)#, medcon)
 
     # compute scores of each sample across entire dataset
     scores_all = {}
@@ -66,10 +66,10 @@ def compute_scores(tgt, out, metrics, is_cxr):
         return a scores dict ''' 
    
     # unpack tuple of pre-loaded metrics
-    bleu, rouge, bertscore, f1radgraph, f1chexbert, medcon = metrics
+    bleu, rouge, bertscore, f1radgraph, f1chexbert = metrics #, medcon
 
     # compute medcon umls metric over individual string
-    score_medcon = medcon(tgt, out)
+    # score_medcon = medcon(tgt, out)
 
     # convert single sample to list
     tgt, out = wrap_str_in_lst(tgt), wrap_str_in_lst(out)
@@ -103,7 +103,7 @@ def compute_scores(tgt, out, metrics, is_cxr):
         'BERT': np.mean(scores_bert['f1']), 
         'F1-CheXbert': score_chexbert,
         'F1-Radgraph': score_radgraph,
-        'MEDCON': score_medcon,
+        # 'MEDCON': score_medcon,
     }
 
     # scale scores to be on [0,100] instead of [0,1]
@@ -136,7 +136,7 @@ def write_all_scores(args, scores_all):
     txt_out.append(header)
     str_txt = f'{ss["BLEU"]} & {ss["ROUGE-L"]} & {ss["BERT"]}'
     str_txt += f' & {ss["F1-Radgraph"]} & {ss["F1-CheXbert"]}'
-    str_txt += f' & {ss["MEDCON"]} '
+    # str_txt += f' & {ss["MEDCON"]} '
     txt_out.append(str_txt)
     fn_scores_txt = os.path.join(args.dir_out, constants.FN_METRICS_TXT)
     process.write_list_to_csv(fn_scores_txt, txt_out)

@@ -1,0 +1,16 @@
+aiohttp==3.9.3
+auto_gptq==0.7.0
+datasets==2.17.1
+evaluate==0.4.1
+f1chexbert==0.0.2
+numpy==1.26.4
+peft==0.8.2
+quickumls==1.4.2
+radgraph==0.0.9
+sentence_transformers==2.4.0
+spacy==3.7.4
+tiktoken==0.6.0
+timeout_decorator==0.5.0
+torch==2.2.0
+tqdm==4.66.2
+transformers==4.38.1

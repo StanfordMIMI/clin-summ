@@ -298,7 +298,7 @@ class SummDataset():
             self.append_pregenerated_data()
             
         path = os.path.join(args.dir_out, fn_out)
-        process.write_list_to_jsonl(path, self.data, key=None)
+        process.write_list_to_jsonl(path, self.data)#, key=None)
 
         if 'result' in fn_out:
             print(f'results generated in {args.dir_out}')

@@ -5,7 +5,7 @@ import os
 ### project directory ########################################
 
 # TODO: set DIR_PROJECT as location for all data and models (outside git repo)
-DIR_PROJECT = "/your/project/directory/here/"
+DIR_PROJECT = "/dataNAS/people/onat/clin_summ_results"
 assert os.path.exists(DIR_PROJECT), "please enter valid directory"
 
 
@@ -280,4 +280,4 @@ FN_TST = 'test'
 KEYS_INP = ['idx', 'inputs', 'target']
 KEYS_OUT = ['idx', 'inputs', 'target', 'prompt', 'output']
 METRICS = ['BLEU', 'ROUGE-1', 'ROUGE-2', 'ROUGE-L',
-           'BERT', 'F1-CheXbert', 'F1-Radgraph', 'MEDCON']
+           'BERT', 'F1-CheXbert', 'F1-Radgraph']#, 'MEDCON']
