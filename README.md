@@ -1,4 +1,4 @@
-# Clinical Text Summarization by Adapting LLMs
+# Clinical Text Summarization by Adapting LLMs | Nature Medicine
 
 Official implementation from Stanford University<br>
 - <b> Title: </b>[Adapted Large Language Models Can Outperform Medical Experts in Clinical Text Summarization](https://arxiv.org/pdf/2309.07430.pdf)<br>
@@ -56,12 +56,13 @@ Below is a description of relevant scripts:
 ## Citation
 
 ```
-@misc{vanveen2023clinical,
-      title={Clinical Text Summarization: Adapting Large Language Models Can Outperform Human Experts},
-      author={Dave Van Veen and Cara Van Uden and Louis Blankemeier and Jean-Benoit Delbrouck and Asad Aali and Christian Bluethgen and Anuj Pareek and Malgorzata Polacin and William Collins and Neera Ahuja and Curtis P. Langlotz and Jason Hom and Sergios Gatidis and John Pauly and Akshay S. Chaudhari},
-      year={2023},
-      eprint={2309.07430},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@article{vanveen2024linical,
+  title={Adapted large language models can outperform medical experts in clinical text summarization},
+  author={Van Veen, Dave and Van Uden, Cara and Blankemeier, Louis and Delbrouck, Jean-Benoit and Aali, Asad and Bluethgen, Christian and Pareek, Anuj and Polacin, Malgorzata and Collins, William and Ahuja, Neera and Langlotz, Curtis P. and Hom, Jason and Gatidis, Sergios and Pauly, John and Chaudhari, Akshay S.},
+  journal={Nature Medicine},
+  year={2024},
+  doi={10.1038/s41591-024-02855-5},
+  url={https://doi.org/10.1038/s41591-024-02855-5},
+  published={27 February 2024}
 }
 ```
