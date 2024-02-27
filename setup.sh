@@ -5,7 +5,7 @@ IS_GCP=true
 if $IS_GCP; then 
     source /opt/conda/etc/profile.d/conda.sh
 else
-    source /home/tim/miniconda3/etc/profile.d/conda.sh
+    source ~/miniconda3/etc/profile.d/conda.sh
 fi
 conda create -n clin_summ_tim python=3.9
 
