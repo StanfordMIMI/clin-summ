@@ -56,8 +56,8 @@ Below is a description of relevant scripts:
 ## Citation
 
 ```
-@article{vanveen2024linical,
-  title={Adapted large language models can outperform medical experts in clinical text summarization},
+@article{vanveen2024clinical,
+  title={Adapted Large Language Models Can Outperform Medical Experts in Clinical Text Summarization},
   author={Van Veen, Dave and Van Uden, Cara and Blankemeier, Louis and Delbrouck, Jean-Benoit and Aali, Asad and Bluethgen, Christian and Pareek, Anuj and Polacin, Malgorzata and Collins, William and Ahuja, Neera and Langlotz, Curtis P. and Hom, Jason and Gatidis, Sergios and Pauly, John and Chaudhari, Akshay S.},
   journal={Nature Medicine},
   year={2024},
