@@ -5,7 +5,7 @@ import os
 ### project directory ########################################
 
 # TODO: set DIR_PROJECT as location for all data and models (outside git repo)
-DIR_PROJECT = "/dataNAS/people/onat/clin_summ_results"
+DIR_PROJECT = "/home/tim/clin_summ_results"
 assert os.path.exists(DIR_PROJECT), "please enter valid directory"
 
 
@@ -14,7 +14,7 @@ assert os.path.exists(DIR_PROJECT), "please enter valid directory"
 
 MODELS = {
 
-    's2s-t5': { # seq2seq architectures
+    's2s-t5': {  # seq2seq architectures
         "t5-xl": "t5-3b",
         "flan-t5-xl": "google/flan-t5-xl",
     },
@@ -22,15 +22,15 @@ MODELS = {
         "flan-ul2": "google/flan-ul2",
     },
 
-    'gpt': { # gpt-style architectures
+    'gpt': {  # gpt-style architectures
 
-        "vicuna-7b": "AlekseyKorshuk/vicuna-7b", 
+        "vicuna-7b": "AlekseyKorshuk/vicuna-7b",
         "alpaca-7b": "chavinlo/alpaca-native",
         "med-alpaca-7b": "medalpaca/medalpaca-7b",
 
     },
 
-    'gptq': { # gpt-style architectures w quant
+    'gptq': {  # gpt-style architectures w quant
         'llama2-7b': {
             'path': 'TheBloke/Llama-2-7B-GPTQ',
             'basename': 'model',
