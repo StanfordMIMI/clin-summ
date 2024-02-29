@@ -5,7 +5,7 @@ import os
 ### project directory ########################################
 
 # TODO: set DIR_PROJECT as location for all data and models (outside git repo)
-DIR_PROJECT = "/home/tim/clin_summ_results"
+DIR_PROJECT = "/dataNAS/people/onat/tim/clin_summ_results"
 assert os.path.exists(DIR_PROJECT), "please enter valid directory"
 
 
