@@ -31,7 +31,7 @@ def get_parser(purpose=None):
                         help='number of samples to evaluate')
     parser.add_argument('--is_demo', action='store_true',
                         help='allows one to bypass N_MIN_SAMPLES')
-    parser.add_argument('--use_finetuned', action='store_true', default=True,
+    parser.add_argument('--use_finetuned', action='store_true', default=False,
                         help='allows one to also use a non-finetuned model for case id 300')
 
     args = parser.parse_args()
