@@ -102,7 +102,7 @@ def load_model_and_tokenizer_wrapper(args):
 
     model, tokenizer = train.load_model_and_tokenizer(args)
     tokenizer.eos_token_id = 1
-    if args.case_id >= 100: # if not discrete prompting
+    if args.case_id >= 100 and args.use_finetuned:  # if not discrete prompting
         model = get_finetuned_model(model, args)
     if args.model != 'flan-ul2':
         model.to(args.device)
