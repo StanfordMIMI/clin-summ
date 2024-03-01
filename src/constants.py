@@ -24,6 +24,7 @@ MODELS = {
 
     'gpt': {  # gpt-style architectures
 
+        "bio-med-lm": "stanford-crfm/BioMedLM",
         "vicuna-7b": "AlekseyKorshuk/vicuna-7b",
         "alpaca-7b": "chavinlo/alpaca-native",
         "med-alpaca-7b": "medalpaca/medalpaca-7b",
