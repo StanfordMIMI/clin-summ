@@ -29,7 +29,7 @@ In addition to proprietary models GPT-3.5 and GPT-4, we adapt the following open
 
 1. Use these commands to set up a conda environment:
 ```
-conda env create -f env.yml
+conda env create -f env.yml # or conda env create -f env.yml -p ${PATH}
 conda activate clin-summ 
 ```
 2. In `src/constants.py`, create your own project directory `DIR_PROJECT` outside this repository which will contain input data, trained models, and generated output.
