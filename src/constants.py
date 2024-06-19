@@ -116,7 +116,7 @@ DEFAULTS = {
     'lr0': 1e-3,
     'lr_schedule': 'linear_decay', 
     'lr_num_warmup_steps': 100, 
-    'max_trn_epochs': 10,
+    'max_trn_epochs': 5,
     
     # only relevant if querying openai model
     'gpt_temp': 0.1, 
