@@ -222,7 +222,6 @@ def load_model_and_tokenizer(args):
                                                      quantization_config=quantization_config)
         tokenizer = AutoTokenizer.from_pretrained(model_path,
                                                   padding_side='left')
-        
         if tokenizer.pad_token_id is None: # gpt-2 pad token not set by default
             tokenizer.pad_token_id = tokenizer.eos_token_id 
 
@@ -266,7 +265,6 @@ def get_tunable_model(model, args):
         task_type = peft.TaskType.SEQ_2_SEQ_LM 
     
     if constants.cases[args.case_id]['method'] == 'qlora':
-
         # prepare for k-bit training
         model = peft.prepare_model_for_kbit_training(model) 
         
