@@ -69,4 +69,5 @@ Below is a description of relevant scripts:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- `src/UMLSScorer.py` requires a [UMLS license](https://www.nlm.nih.gov/research/umls/index.html).
+- The remainder of this project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
