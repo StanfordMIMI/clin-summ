@@ -66,3 +66,7 @@ Below is a description of relevant scripts:
   published={27 February 2024}
 }
 ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
